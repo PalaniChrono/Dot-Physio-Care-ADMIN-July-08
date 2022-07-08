@@ -1,0 +1,57 @@
+<app-header></app-header>
+<app-sidemenu></app-sidemenu>
+<div class="app sidebar-mini">
+    <div class="page">
+        <div class="page-main" [class.opacity-2]="viewBox" [class.opacity-10]="!viewBox">
+            <div class="app-content">
+                <div class="side-app">
+
+                    <div class="page-header">
+                        <h4 class="page-title">Product Banner Image</h4>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form autocomplete="off">
+                                        <div class="row">
+                                            <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                                                <label class="homebannernamelabel">Banner Image</label>
+                                                <img [src]="productBannerImage1" class="w-80 scale-bottom" />
+                                            </div>
+                                            <div class="form-group col-6 mx-auto">
+                                                <app-sub-category-image (refreshCurrentData)="getProductContent()" [data]="'product_banner_1'"></app-sub-category-image>
+                                                <label class="homebannernamelabel text-danger d-flex flex-column justify-content-start  align-items-center">Dimension size:	636 x 432 px</label>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+
+                                            <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                                                <label class="homebannernamelabel">Banner Image</label>
+                                                <img [src]="productBannerImage2" class="w-80 scale-bottom" />
+                                            </div>
+                                            <div class="form-group col-6 mx-auto">
+                                                <app-sub-category-image (refreshCurrentData)="getProductContent()" [data]="'product_banner_2'"></app-sub-category-image>
+                                                <label class="homebannernamelabel text-danger d-flex flex-column justify-content-start  align-items-center">Dimension size:	636 x 432 px</label>
+
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <app-footer></app-footer>
+        </div>
+    </div>
+</div>

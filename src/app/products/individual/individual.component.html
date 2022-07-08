@@ -1,0 +1,83 @@
+<app-header></app-header>
+<app-sidemenu></app-sidemenu>
+<div class="app sidebar-mini">
+    <div class="page">
+        <div class="page-main" [class.opacity-2]="viewBox" [class.opacity-10]="!viewBox">
+            <div class="app-content">
+                <div class="side-app">
+
+                    <div class="page-header">
+                        <h4 class="page-title">Individuals</h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+
+                                        <div class="col-12">
+                                            <div class="form-group col-12 p-0 mx-auto d-flex flex-column">
+                                                <label class="homebannernamelabel">Header</label>
+                                                <input type="text" [placeholder]="'Enter text here...'" [(ngModel)]="header" [ngModelOptions]="{ standalone: true }">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-12">
+                                            <div class="form-group col-12 p-0 mx-auto d-flex flex-column">
+                                                <label class="homebannernamelabel">Content</label>
+                                                <textarea rows="8" [(ngModel)]="content" [class.is-invalid]="errorMsg.quote" type="text" class="form-control" id="content" placeholder="Enter Text Here" [ngModelOptions]="{standalone: true}" autocomplete="off">
+                                                </textarea>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col m-auto">
+                                            <button class="btn btn-success rounded mx-auto w-25" (click)="updateHeader()">Update</button>
+                                        </div>
+
+                                    </div>
+                                    <br>
+
+
+                                    <div class="row">
+                                        <label class="homebannernamelabel text-center">Individual Image</label>
+                                        <div class="form-group col-6 m-auto d-flex flex-column justify-content-start  align-items-center">
+                                            <img [src]="this.productDetails.two_image" class=" scale-bottom" />
+                                        </div>
+
+                                        <div class="form-group col-6 mx-auto">
+                                            <app-sub-category-image (refreshCurrentData)="getProductSection()" [data]="'product_individual_image'"></app-sub-category-image>
+                                            <label class="homebannernamelabel text-danger d-flex flex-column justify-content-start  align-items-center">Dimension size:	410 x 490 px</label>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal" tabindex="-1" role="dialog" [class.d-block]="show" [class.d-none]="!show" style=" z-index: 1000000; ">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content" style="border: 2px solid #ffdf06;">
+                        <div class="modal-header">
+                            <!-- <h5 class="modal-title" id="exampleModalLabel">ATTENTION</h5> -->
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closepopup()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                        </div>
+                        <div class="modal-body" style="color: black; font-size: large; height: 5em; z-index: 10000;">
+                            Maximum Length of Card Description is "340" Letters
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <app-footer></app-footer>
+        </div>
+    </div>
+</div>

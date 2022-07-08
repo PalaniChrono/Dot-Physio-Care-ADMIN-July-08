@@ -1,0 +1,81 @@
+<app-header></app-header>
+<app-sidemenu></app-sidemenu>
+<div class="app sidebar-mini">
+    <div class="page">
+        <div class="page-main" [class.opacity-2]="viewBox" [class.opacity-10]="!viewBox">
+            <div class="app-content">
+                <div class="side-app">
+                    <div class="page-header">
+                        <h4 class="page-title">Home Banner Image</h4>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form autocomplete="off">
+                                        <div class="row">
+
+                                            <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                                                <label class="homebannernamelabel">Banner One</label>
+                                                <img [src]="homeBannerImage" class="w-80 scale-bottom" />
+                                            </div>
+                                            <div class="form-group col-6 mx-auto">
+                                                <app-sub-category-image (refreshCurrentData)="getHomeBanner()" [data]="'home_banner'"></app-sub-category-image>
+                                                <label class="homebannernamelabel text-danger d-flex flex-column justify-content-start  align-items-center">Dimension size:	1439 x 787 px</label>
+                                            </div>
+                                    
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                                                <label class="homebannernamelabel">Banner Two</label>
+                                                <img [src]="homeBannerImagetwo" class="w-80 scale-bottom" />
+                                            </div>
+                                            <div class="form-group col-6 mx-auto">
+                                                <app-sub-category-image (refreshCurrentData)="getHomeBanner()" [data]="'home_banner_two'"></app-sub-category-image>
+                                                <label class="homebannernamelabel text-danger d-flex flex-column justify-content-start  align-items-center">Dimension size:	1439 x 787 px</label>
+                                            </div>
+                                    
+                                        </div>
+                                        <div class="row">
+
+                                            <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                                                <label class="homebannernamelabel">Banner Three</label>
+                                                <img [src]="homeBannerImagethree" class="w-80 scale-bottom" />
+                                            </div>
+                                            <div class="form-group col-6 mx-auto">
+                                                <app-sub-category-image (refreshCurrentData)="getHomeBanner()" [data]="'home_banner_three'"></app-sub-category-image>
+                                                <label class="homebannernamelabel text-danger d-flex flex-column justify-content-start  align-items-center">Dimension size:	1439 x 787 px</label>
+                                            </div>
+                                    
+                                        </div>
+                                        <div class="row">
+
+                                            <div class="form-group col-6 mx-auto d-flex flex-column justify-content-start  align-items-center">
+                                                <label class="homebannernamelabel">Banner Four</label>
+                                                <img [src]="homeBannerImagefour" class="w-80 scale-bottom" />
+                                            </div>
+                                            <div class="form-group col-6 mx-auto">
+                                                <app-sub-category-image (refreshCurrentData)="getHomeBanner()" [data]="'home_banner_four'"></app-sub-category-image>
+                                                <label class="homebannernamelabel text-danger d-flex flex-column justify-content-start  align-items-center">Dimension size:	1439 x 787 px</label>
+                                            </div>
+                                    
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <app-footer></app-footer>
+        </div>
+    </div>
+</div>
